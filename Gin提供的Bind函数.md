@@ -56,7 +56,7 @@ GetHeader(key string) string：如果指定的参数存在则返回其值，不�
 
 - ShouldBind(obj interface{}) error
 
-检查Content-Type并选择适配的绑定引擎，不同的Content-Type，选择的绑定引擎不同，Content-Type当前支持application/json、application/xml和application/yaml。
+检查Content-Type并选择适配的绑定引擎，不同的Content-Type，选择的绑定引擎不同，Content-Type当前支持application/json、application/xml。
 
 该函数会解析HTTP请求Body，如果Content-Type为application/json，则把body视为json格式，然后解析body字符串到传入的结构体指针中，如果绑定失败，返回错误内容。
 
