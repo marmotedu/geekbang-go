@@ -60,7 +60,7 @@ $ dlv attach $PID  # PID 是需要调试程序的进程 ID
 
 2) dlv debug
 
-`dlv debug`可以通过源码文件进入调试模式。`dlv debug`会先编译Go源文件，并在当前目录下生成一个名为`__debug_bin`的可执行二进制文件，接着进入调试模式。执行以下指令进入调试模式：
+`dlv debug`可以通过源码文件进入调试模式。`dlv debug`会先编译Go源文件，并在当前目录下生成一个名为`__debug_bin`的可执行二进制文件，接着进入调试模式。执行以下命令进入调试模式：
 
 ```bash
 $ dlv debug main.go
@@ -73,7 +73,7 @@ Type 'help' for list of commands.
 3) dlv exec
 
 
-`dlv exec`可以通过一个二进制文件进入调试模式。执行以下指令进入调试模式：
+`dlv exec`可以通过一个二进制文件进入调试模式。执行以下命令进入调试模式：
 
 ```bash
 $ dlv exec /opt/iam/bin/iam-apiserver  ## 直接启动调试
@@ -102,7 +102,7 @@ $ dlv core <executable-file> <core-file>
 
 ### 调试命令
 
-进入调试模式之后，我们就可以利用调试模式提供的丰富调试命令来调试程序。`dlv`提供了以下调试命令：
+进入调试模式之后，我们就可以利用调试模式中提供的丰富的调试命令来调试程序。`dlv`提供了以下调试命令：
 
 ```bash
 (dlv) help
@@ -170,7 +170,7 @@ Other commands:
 Type help followed by a command for full documentation.
 ```
 
-`dlv`支持的调试命令有很多，常用的调试命令为：break、print、next、continue、args、locals、list、breakpoints、restart、exit。
+`dlv`支持的调试命令有很多，常用的调试命令有：break、print、next、continue、args、locals、list、breakpoints、restart、exit。
 
 
 ### 使用delve调试代码
