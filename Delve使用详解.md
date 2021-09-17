@@ -265,7 +265,7 @@ Warning: debugging optimized function
 (dlv)
 ```
 
-通过`139`行的代码，我们发现日志报错是因为`cachev1.GetCacheInsOr`返回了错误信息。我们可以在`cachev1.GetCacheInsOr`处打断点，继续排障。
+通过第`139`行的代码，我们发现日志报错是因为`cachev1.GetCacheInsOr`返回了错误信息。我们可以在`cachev1.GetCacheInsOr`处打断点，继续排障。
 
 5) 重新打断点继续排障
 
@@ -394,4 +394,4 @@ Warning: debugging optimized function
 找到问题的根因之后，就可以修改`/etc/iam/iam-apiserver.yaml`配置文件中的`mysql.host`配置项的值为：`127.0.0.1:3306`。重新启动`iam-apiserver`，发现服务成功运行。
 
 
-delve是一个非常强大的调试工具，本文只用了其中一小部分功能。更多的delve功能需要你解锁。在你能够熟练使用delve工具之后，相信delve能够极大的提高你的排障效率。
+delve是一款非常强大的调试工具，本文只用了其中一小部分功能，更多的delve功能需要你解锁。在你能够熟练使用delve工具之后，相信delve能够极大的提高你的排障效率。
