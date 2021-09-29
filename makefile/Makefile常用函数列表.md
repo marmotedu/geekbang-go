@@ -4,7 +4,7 @@
 |:----|:----|
 |$(origin <variable>)|告诉变量的“出生情况”，有如下返回值：<br><ul><li>undefined：<variable> 从来没有定义过</li><li>default：<variable> 是一个默认的定义</li><li>environment：<variable> 是一个环境变量</li><li>file：<variable> 这个变量被定义在 Makefile中</li><li>command line：<variable> 这个变量是被命令行定义的</li><li>override：<variable> 是被 override 指示符重新定义的</li><li>automatic：<variable> 是一个命令运行中的自动化变量</li>|
 |$(addsuffix <suffix>,<names...>)|把后缀<suffix>加到<names>中的每个单词后面，并返回加过后缀的文件名序列。|
-|$(addprefix <prefix>,<names...>)|把前缀<prefix>加到<names>中的每个单词后面，并返回加过前缀的文件名序列。|
+|$(addprefix <prefix>,<names...>)|把前缀<prefix>加到<names>中的每个单词前面，并返回加过前缀的文件名序列。|
 |$(wildcard <pattern>)|扩展通配符，例如：$(wildcard ${ROOT_DIR}/build/docker/\*)|
 |$(word <n>,<text>)|取字符串<text>中第<n>个单词（从一开始），并返回字符串<text>中第<n>个单词。如 <n>比<text>中的单词数要大，那么返回空字符串|
 |$(subst <from>,<to>,<text>)|把字串 <text> 中的 <from> 字符串替换成 <to>，并返回被替换后的字符串|
