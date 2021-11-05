@@ -104,8 +104,9 @@ import (
 v := make(map[int]string, 4)
 v := make([]string, 0, 4)
 
-在顶层，使用标准var关键字。请勿指定类型，除非它与表达式的类型不同。
+- 在顶层，使用标准var关键字。请勿指定类型，除非它与表达式的类型不同。
 
+```go
 // bad
 var _s string = F()
 
@@ -119,7 +120,7 @@ var _s = F()
 func F() string { return "A" }
 ```
 
-- 对于未导出的顶层常量和变量，使用_作为前缀。
+- 对于未导出的顶层常量和变量，使用`_`作为前缀。
 
 ```go
 // bad
@@ -468,7 +469,7 @@ var ErrFormat = errors.New("unknown format")
 - 每个可导出的名字都要有注释，该注释对导出的变量、函数、结构体、接口等进行简要介绍。
 - 全部使用单行注释，禁止使用多行注释。
 - 和代码的规范一样，单行注释不要过长，禁止超过 120 字符，超过的请使用换行展示，尽量保持格式优雅。
-- 注释必须是完整的句子，以需要注释的内容作为开头，句点作为结尾，格式为 // 名称 描述. 。例如：
+- 注释必须是完整的句子，以需要注释的内容作为开头，句点作为结尾，`格式为 // 名称 描述.`。例如：
 
 ```go
 // bad
@@ -555,13 +556,15 @@ type User struct {
 
 每个需要导出的函数或者方法都必须有注释，格式为// 函数名 函数描述.，例如：
 
+```go
 // BeforeUpdate run before update database record.
 func (p *Policy) BeforeUpdate() (err error) {
 	// normal code
 	return nil
 }
+```
 
-3.5 类型注释
+### 3.5 类型注释
 
 - 每个需要导出的类型定义和类型别名都必须有注释说明，格式为 `// 类型名 类型描述.`，例如：
 
@@ -699,20 +702,25 @@ u2 := user{
 
 ### 5.1 if
 
-if 接受初始化语句，约定如下方式建立局部变量。
+- if 接受初始化语句，约定如下方式建立局部变量。
 
+```go
 if err := loadConfig(); err != nil {
 	// error handling
 	return err
 }
-if 对于bool类型的变量，应直接进行真假判断。
+```
 
+- if 对于bool类型的变量，应直接进行真假判断。
+
+```go
 var isAllow bool
 if isAllow {
 	// normal code
 }
+```
 
-5.2 for
+### 5.2 for
 
 - 采用短声明建立局部变量。
 
