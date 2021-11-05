@@ -25,7 +25,6 @@
 	//good
 	jwt "github.com/dgrijalva/jwt-go/v4"
 ```
-
 	- 导入的包建议进行分组，匿名包的引用使用一个新的分组，并对匿名包引用进行说明。
 
 ```go
