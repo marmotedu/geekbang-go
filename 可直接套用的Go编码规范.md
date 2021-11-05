@@ -103,6 +103,7 @@ import (
 ```go
 v := make(map[int]string, 4)
 v := make([]string, 0, 4)
+```
 
 - 在顶层，使用标准var关键字。请勿指定类型，除非它与表达式的类型不同。
 
