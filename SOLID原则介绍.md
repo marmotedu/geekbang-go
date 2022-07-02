@@ -191,6 +191,7 @@ package solid
 import "fmt"
 
 // IDriver 司机抽象接口
+type IDriver interface {
 	Drive(car ICar) // 开车
 }
 
