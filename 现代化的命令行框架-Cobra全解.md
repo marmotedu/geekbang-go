@@ -1,4 +1,3 @@
-
 ## 现代化的命令行框架：Cobra 全解
 
 [Cobra](https://github.com/spf13/cobra) 是一个可以创建强大的现代 CLI 应用程序的库，它还提供了一个可以生成应用和命令文件的程序的命令行工具：`cobra-cli`。有许多大型项目都是用 cobra 来构建他们的应用程序，例如：kubernetes、Docker、Etcd、Rkt、Hugo 等。Cobra 具有很多特性，一些核心特性如下：
